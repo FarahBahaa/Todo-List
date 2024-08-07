@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TodoListTypeComponent } from './todo-list-type.component';
+import { TodoListAddComponent } from './todo-list-add.component';
 
-describe('TodoListTypeComponent', () => {
-  let component: TodoListTypeComponent;
-  let fixture: ComponentFixture<TodoListTypeComponent>;
+describe('TodoListAddComponent', () => {
+  let component: TodoListAddComponent;
+  let fixture: ComponentFixture<TodoListAddComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TodoListTypeComponent]
+      imports: [TodoListAddComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(TodoListTypeComponent);
+    fixture = TestBed.createComponent(TodoListAddComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
