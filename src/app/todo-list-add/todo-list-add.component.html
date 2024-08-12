@@ -1,1 +1,9 @@
-<p>todo-list-add works!</p>
+
+    <div class="add-task-container">
+        <mat-form-field appearance="outline">
+          <mat-label>Add task...</mat-label>
+          <input matInput type="text" [(ngModel)]="newTask" placeholder="Ex.Laundry">
+        </mat-form-field>
+        <button class="button" mat-mini-fab>+</button>
+    </div>
+

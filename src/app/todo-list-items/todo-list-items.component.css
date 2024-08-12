@@ -1,0 +1,23 @@
+ /* .todo-list-items-container {
+    display: block;
+    flex-direction: column;
+    justify-content: start;
+    
+  } */
+  .todo-item {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  
+  .items {
+    flex-grow: 1; 
+    color:black;
+  }
+  
+  .buttons {
+    display: flex; 
+    gap: 5px;
+  }
+
+  
