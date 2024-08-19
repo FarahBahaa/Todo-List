@@ -1,9 +1,11 @@
- /* .todo-list-items-container {
-    display: block;
+  .todo-list-items-container {
+    display: flex;
     flex-direction: column;
     justify-content: start;
-    
-  } */
+    align-content: center;
+    align-items: center;
+    width: 100%;
+  } 
   .todo-item {
     display: flex; 
     justify-content: space-between; 
@@ -12,12 +14,25 @@
   
   .items {
     flex-grow: 1; 
-    color:black;
+    color:rgb(144 40 144);
+    margin-right: 700px;
   }
   
   .buttons {
-    display: flex; 
-    gap: 5px;
+    display:flex;
+    gap : 5px;
+  } 
+ 
+  mat-icon{
+    color: rgb(122 43 119 / 63%);
+    background-color:none;   
   }
 
-  
+  mat-checkbox{
+    border: 100px;
+  }
+
+  button {
+    border:unset;
+    background-color: transparent;
+  }
