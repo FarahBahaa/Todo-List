@@ -1,14 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@679&family=Rubik+Mono+One&display=swap');
+
 .header {
-    text-align: center;
-    font-family: "Dancing Script " ,cursive; 
-    color: rgb(21, 19, 7);
+    color: rgb(127 22 126 / 63%);
     top :0;
     left: 0;
     width: 100%;
+    margin-top: 20px;
+    display: flex;                  
+    align-items: center;          
+    justify-content: center;
+  }
+
+  
+  .header-style {
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: 679;
+    font-style: normal
+   
    
   }
-  
-  
-  
-  
+  .header-image {
+    width: 100px;                  
+    height: 115px;   
+    padding-bottom: 20px;   
+    padding-left: 5px;    
+       
+  }
 
+
+  .header-image2 {
+    width: 100px;                  
+    height: 115px;   
+    padding-bottom: 20px;   
+    padding-right: 10px;           
+  }

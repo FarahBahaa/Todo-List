@@ -3,10 +3,13 @@
   flex-direction: row;
   justify-content: center;
 }
-.button{
-  margin:5px;
+
+mat-label{
+  color: rgb(0,0,0,0.5);
 }
 
-
-  
-  
+.button{
+  margin:5px;
+  background-color: rgb(122 43 119 / 63%);
+  border-radius:45%;
+}
