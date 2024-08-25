@@ -10,12 +10,13 @@
     display: flex; 
     justify-content: space-between; 
     align-items: center; 
+    width: 100%;
   }
   
   .items {
     flex-grow: 1; 
     color:rgb(144 40 144);
-    margin-right: 700px;
+    margin-right: 300px;
   }
   
   .buttons {
@@ -30,9 +31,14 @@
 
   mat-checkbox{
     border: 100px;
+    
   }
 
   button {
     border:unset;
     background-color: transparent;
   }
+
+  input {
+    border: none; 
+}
