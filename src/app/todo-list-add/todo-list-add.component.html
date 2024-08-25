@@ -1,9 +1,7 @@
-
-    <div class="add-task-container">
-        <mat-form-field appearance="outline">
-          <mat-label>Add task...</mat-label>
-          <input matInput type="text" [(ngModel)]="newTask" placeholder="Ex.Laundry">
-        </mat-form-field>
-        <button class="button" mat-mini-fab>+</button>
-    </div>
-
+<div class="add-task-container">
+    <mat-form-field appearance="outline">
+      <mat-label>Add task...</mat-label>
+      <input matInput type="text" [(ngModel)]="newTask" placeholder="Ex.Laundry">
+    </mat-form-field>
+    <button class="button" mat-mini-fab (click)="addTask()">+</button>
+</div>

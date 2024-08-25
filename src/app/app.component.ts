@@ -14,4 +14,12 @@ import { TodoListItemsComponent } from './todo-list-items/todo-list-items.compon
 })
 export class AppComponent {
   title = 'TodoList';
+  
+  items: { text: string, isEditable?: boolean }[] = [];
+
+  addItem(newTask: string){    
+    this.items.push({ text: newTask, isEditable: false });
+    console.log("items", this.items);
+    
+  }
 }

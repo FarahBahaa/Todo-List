@@ -1,5 +1,5 @@
 <div class="app-container">
     <app-todo-list-header/>
-    <app-todo-list-add/>
-    <app-todo-list-items/>
+    <app-todo-list-add (AddedItem)="addItem($event)"></app-todo-list-add>
+    <app-todo-list-items [items]="items" ></app-todo-list-items>
 </div>

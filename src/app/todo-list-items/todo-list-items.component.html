@@ -1,127 +1,24 @@
 <div class="todo-list-items-container">
   <mat-list>
-    <div>
+    @for(task of items; track task) {
       <mat-list-item>
         <div class="todo-item">
           <div class="items">
             <mat-checkbox></mat-checkbox>
-            <span>Shopping</span>
+      <!-- <input matInput type="text" id="task" value="{{task}}" [readonly]="task"> -->
+      <input matInput type="text" [(ngModel)]="task.text" [readonly]="!task.isEditable">
           </div>
           <div class="buttons">
-            <button mat-fab-button color="warn">
+            <button mat-fab-button color="warn" (click) = "deleteItem(task)">
               <mat-icon>delete</mat-icon>
             </button>
-            <button mat-fab-button color="primary">
-              <mat-icon>edit</mat-icon>
+            <button mat-fab-button color="primary" (click) = "editItem(task)" >
+              <mat-icon>{{ task.isEditable ? 'check' : 'edit' }}</mat-icon>
             </button>
           </div>
         </div>
+        <mat-divider></mat-divider>
       </mat-list-item>
-    </div>
- 
-    <mat-divider></mat-divider>
-
-    <div>
-      <mat-list-item>
-        <div class="todo-item">
-          <div class="items">
-            <mat-checkbox></mat-checkbox>
-            <span>Cleaning</span>        
-          </div>
-          <div class="buttons">
-            <button mat-fab-button color="warn">
-              <mat-icon>delete</mat-icon>
-            </button>
-            <button mat-fab-button color="primary">
-              <mat-icon>edit</mat-icon>
-            </button>
-          </div>
-        </div>
-      </mat-list-item>
-    </div>
-
-    <mat-divider></mat-divider>
-
-    <div>
-      <mat-list-item>
-        <div class="todo-item">
-          <div class="items">
-            <mat-checkbox></mat-checkbox>
-            <span>Laundry</span>
-          </div>
-          <div class="buttons">
-            <button mat-fab-button color="warn">
-              <mat-icon>delete</mat-icon>
-            </button>
-            <button mat-fab-button color="primary">
-              <mat-icon>edit</mat-icon>
-            </button>
-          </div>
-        </div>
-      </mat-list-item>
-    </div>
-
-    <mat-divider></mat-divider>
-
-    <div>
-      <mat-list-item>
-        <div class="todo-item">
-          <div class="items">
-            <mat-checkbox></mat-checkbox>
-            <span>Cooking</span>
-          </div>
-          <div class="buttons">
-            <button mat-fab-button color="warn">
-              <mat-icon>delete</mat-icon>
-            </button>
-            <button mat-fab-button color="primary">
-              <mat-icon>edit</mat-icon>
-            </button>
-          </div>
-        </div>
-      </mat-list-item>
-    </div>
-    <mat-divider></mat-divider>
-
-    <div>
-      <mat-list-item>
-        <div class="todo-item">
-          <div class="items">
-            <mat-checkbox></mat-checkbox>
-            <span>Sewing</span>
-          </div>
-          <div class="buttons">
-            <button mat-fab-button color="warn">
-              <mat-icon>delete</mat-icon>
-            </button>
-            <button mat-fab-button color="primary">
-              <mat-icon>edit</mat-icon>
-            </button>
-          </div>
-        </div>
-      </mat-list-item>
-    </div>
-    <mat-divider></mat-divider>
-
-    <div>
-      <mat-list-item>
-        <div class="todo-item">
-          <div class="items">
-            <mat-checkbox></mat-checkbox>
-            <span>Homework</span>
-          </div>
-          <div class="buttons">
-            <button mat-fab-button >
-              <mat-icon>delete</mat-icon>
-            </button>
-            <button mat-fab-button >
-              <mat-icon>edit</mat-icon>
-            </button>
-          </div>
-        </div>
-      </mat-list-item>
-    </div>
-    <mat-divider></mat-divider>
-
+    }
   </mat-list>
 </div>
