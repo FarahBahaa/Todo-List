@@ -34,5 +34,40 @@
     width: 100px;                  
     height: 115px;   
     padding-bottom: 20px;   
-    padding-right: 10px;           
+    padding-right: 10px; 
+    
+    
   }
+  @media (max-width: 768px) {
+    .todo-item {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+
+    .items {
+        margin-right: 0; 
+    }
+
+    .add-task-container {
+        flex-direction: column; 
+    }
+
+    .header {
+        flex-direction: column; 
+
+    .header-image, .header-image2 {
+        width: 80px; 
+        height: auto; 
+    }
+}
+  }
+
+@media (max-width: 480px) {
+    .header-style {
+        font-size: 1.5rem; 
+    }
+
+    .button {
+        width: 100%; 
+      }
+    }
