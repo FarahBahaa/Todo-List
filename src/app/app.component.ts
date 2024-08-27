@@ -19,7 +19,7 @@ export class AppComponent {
 
   addItem(newTask: string){    
     this.items.push({ text: newTask, isEditable: false });
-    console.log("items", this.items);
+    
     
   }
 }
