@@ -4,6 +4,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 
+
+
 @Component({
   selector: 'app-todo-list-add',
   standalone: true,
@@ -17,10 +19,15 @@ export class TodoListAddComponent {
   @Output() AddedItem = new EventEmitter<string>();
 
   addTask() {
-    if (this.newTask.trim()) {
-      this.AddedItem.emit(this.newTask); 
-      this.newTask = '';
+    const task = this.newTask.trim();
+    if (task) {
+      this.AddedItem.emit(task); 
+      this.reset();
     }
+  }
+
+  private reset(){
+    this.newTask = '';
   }
 }
 
