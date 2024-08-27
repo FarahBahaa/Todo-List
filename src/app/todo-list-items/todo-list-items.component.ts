@@ -16,23 +16,18 @@ import { CommonModule } from '@angular/common';
   templateUrl: './todo-list-items.component.html',
   styleUrl: './todo-list-items.component.css'
 })
-export class TodoListItemsComponent {
-  @Input() items: {text:string; isEditable?:boolean; completed?:boolean}[] = [];
 
- 
+export class TodoListItemsComponent {
+  @Input() items: {text: string; isEditable?: boolean; completed?: boolean} [] = [];
 
   deleteItem(task: {text:string}) {
     this.items = this.items.filter(item => item.text !== task.text);
   }
 
   editItem(task: {isEditable?:boolean}){
-    if (task.isEditable) {
-      
-      task.isEditable = false;
-    } else {
-      
-      task.isEditable = true;
+    task.isEditable = !task.isEditable;
     }
   }
+  
     
-  }
+  

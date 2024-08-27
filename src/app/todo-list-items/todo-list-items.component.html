@@ -4,16 +4,17 @@
       <mat-list-item>
         <div class="todo-item">
           <div class="items">
-            <mat-checkbox></mat-checkbox>
-      <!-- <input matInput type="text" id="task" value="{{task}}" [readonly]="task"> -->
-      <input matInput type="text" [(ngModel)]="task.text" [readonly]="!task.isEditable">
+            <mat-checkbox 
+              [(ngModel)]="task.completed">
+            </mat-checkbox>
+      <input matInput type="text" [(ngModel)]="task.text" [readonly]="!task.isEditable" [class.editable]="task.isEditable">
           </div>
           <div class="buttons">
-            <button mat-fab-button color="warn" (click) = "deleteItem(task)">
+            <button mat-fab-button (click) = "deleteItem(task)">
               <mat-icon>delete</mat-icon>
             </button>
-            <button mat-fab-button color="primary" (click) = "editItem(task)" >
-              <mat-icon>{{ task.isEditable ? 'check' : 'edit' }}</mat-icon>
+            <button mat-fab-button (click) = "editItem(task)" >
+              <mat-icon> {{ task.isEditable ? 'check' : 'edit' }} </mat-icon>
             </button>
           </div>
         </div>
